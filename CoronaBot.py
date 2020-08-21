@@ -11,7 +11,8 @@ async def on_message(message):
     if message.author == client.user:
         return
     if message.content.startswith("corona"):
-        await message.channel.send("Hello, " + str(message.author) + " I am a bot which gives you CoViD-19 details of India")
+        sender = str(message.author)[:-5]
+        await message.channel.send("Hello, @" + sender + " I am a bot which gives you CoViD-19 details of India")
         # if message.content == "corona":
         flag = mess[7:]
         if flag == "--help":
@@ -21,6 +22,7 @@ async def on_message(message):
                 res = requests.get(
                     url="https://api.covid19india.org/state_district_wise.json")
                 res = res.json()
+                flag = flag.capitalize()
                 confirm, deceased, recovered, delcon, deldec, delrec = 0, 0, 0, 0, 0, 0
                 for i in res[flag]["districtData"]:
                     confirm = confirm + \
@@ -40,4 +42,4 @@ async def on_message(message):
             except:
                 await message.channel.send("Please enter the state name correctly")
 
-client.run([Token])
+client.run('NzQ0NDE4Nzg1MTI5MTM2MjE4.Xzi8BQ.wrNizpMCGrDL7q4enVtlK0b_dyg')
