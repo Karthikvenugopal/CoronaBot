@@ -42,4 +42,4 @@ async def on_message(message):
             except:
                 await message.channel.send("Please enter the state name correctly")
 
-client.run('NzQ0NDE4Nzg1MTI5MTM2MjE4.Xzi8BQ.wrNizpMCGrDL7q4enVtlK0b_dyg')
+client.run("token")
