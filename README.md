@@ -8,3 +8,4 @@
   - Run 'py CoronaBot.py'
   - Your bot will go online and will be waiting for your request in the server
   - Type 'corona [name of the Indian state]', it'll return the latest stats
+  - Refer the [Discord documentation](https://discord.com/developers/docs/intro) for help in setting up the bot
